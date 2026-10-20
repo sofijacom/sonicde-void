@@ -69,7 +69,7 @@ jobs:
       - name: 🐛 Fix sourcepkg.sh — replace awk with shell parameter expansion
         working-directory: void-packages
         run: |
-          sed -i 's@for var in $(awk .*;@for var in $(printenv | cut -d'"'"'='"'"' -f1);@' common/environment/setup/sourcepkg.sh
+      #    sed -i 's@for var in $(awk .*;@for var in $(printenv | cut -d'"'"'='"'"' -f1);@' common/environment/setup/sourcepkg.sh
       #    sed -i 's@_soname=\$(\${OBJDUMP} -p "\$f" | awk '\''/SONAME/{print \$2}'\'')@_soname=\$(\${OBJDUMP} -p "\$f" | grep '\''SONAME'\'' | cut -d '\'' '\'' -f2)@' common/hooks/post-install/98-shlib-provides.sh
    
       - name: 🧩 Merge this repository into void-linux/void-packages
