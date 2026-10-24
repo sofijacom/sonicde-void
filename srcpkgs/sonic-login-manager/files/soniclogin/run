@@ -1,7 +1,0 @@
-#!/bin/sh
-set -e
-
-sv start elogind >/dev/null
-
-exec 2>&1
-exec /usr/bin/soniclogin
