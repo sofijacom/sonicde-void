@@ -1,7 +1,7 @@
 # Template file for 'sonic-workspace'
 pkgname=sonic-workspace
-version=6.8.0.3
-revision=1
+version=6.8.0.4
+revision=2
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DKDE_INSTALL_QMLDIR=lib/qt6/qml
  -DGLIBC_LOCALE_GEN=OFF -DKDE_INSTALL_LIBEXECDIR=libexec
@@ -27,14 +27,14 @@ makedepends="accountsservice-devel AppStream-qt-devel dbus-devel fontconfig-deve
  sonic-frameworks-runner-devel sonic-frameworks-windowsystem-devel sonic-interface-libraries-devel sonic-system-monitor-library-devel sonic-win-devel sonic-night-light-devel
  sonic-screenlocker-devel sonic-screen-library-devel sonic-frameworks-doctools-devel xcb-util-devel xcb-util-cursor-devel xcb-util-image-devel zlib-devel phonon-devel
  sonic-polkit-devel qcoro-qt6-devel"
-depends="sonic-activity-manager-daemon sonic-frameworks-io-fuse sonic-system-stats iso-codes milou ocean-sound-theme sonic-qt-theme-bridge xmessage xrdb xdg-user-dirs
- sonic-frameworks-io-extras"
+depends="sonic-activity-manager-daemon sonic-frameworks-io-fuse sonic-system-stats iso-codes ocean-sound-theme sonic-qt-theme-bridge xmessage xrdb xdg-user-dirs
+ sonic-frameworks-io-extras sonic-file-search-ui"
 short_desc="Sonic Plasma Workspace (X11-focused)"
 maintainer="nerdyslacker <karyan40024@gmail.com>"
 license="LGPL-2.0-or-later"
 homepage="https://github.com/Sonic-DE/sonic-workspace"
 distfiles="https://github.com/Sonic-DE/sonic-workspace/archive/refs/tags/${version}.tar.gz"
-checksum=a35da39d5977b4c0c27c7d4929dab86e1bfcebaa0f1cdbaa85352d942c400160
+checksum=7101b124adc183d7dab4e6af9e04afd7f224f76c48ea80274874f055641ad187
 provides="plasma-workspace-${version}_${revision}"
 conflicts="plasma-workspace"
 replaces="plasma-workspace>=0"
