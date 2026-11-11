@@ -1,13 +1,21 @@
 name: 🏗️ Build packages
 
+#on:
+#  push:
+#    branches:
+#        - master
+#    paths:
+#        - 'srcpkgs/**'
+#  workflow_dispatch:
+
 on:
+  workflow_dispatch:
   push:
     branches:
-        - master
+      - master
     paths:
-        - 'srcpkgs/**'
-  workflow_dispatch:
-
+      - 'srcpkgs/**'
+      
 jobs:
   build:
     name: Build packages
