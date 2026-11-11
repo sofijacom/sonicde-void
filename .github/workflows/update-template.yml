@@ -16,7 +16,7 @@ on:
 
 jobs:
   update-all:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04 # ubuntu-latest
     env:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -24,7 +24,7 @@ jobs:
       - name: Checkout unstable branch
         uses: actions/checkout@v7.0.1
         with:
-          ref: unstable
+          ref: master # unstable
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
 
