@@ -24,7 +24,7 @@ jobs:
       - name: Checkout unstable branch
         uses: actions/checkout@v7.0.1
         with:
-          ref: master # unstable
+          ref: unstable # master
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -55,4 +55,4 @@ jobs:
         uses: ad-m/github-push-action@v1.3.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: master # unstable
+          branch: unstable # master
